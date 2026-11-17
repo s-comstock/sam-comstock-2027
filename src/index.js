@@ -21,6 +21,7 @@ import { initCal } from "./cal";
 import { initWorkHoverIX } from "./work-hover-ix";
 import { initSmoothyCarousel, initSmoothyMarquee } from "./smoothy";
 import { initCursor } from "./cursor";
+import { initPageTransition } from "./page-transition";
 
 /* Initialize after Webflow finishes loading */
 window.Webflow ||= [];
@@ -43,4 +44,6 @@ window.Webflow.push(() => {
 
   initSmoothScroll();
   initCal();
+
+  initPageTransition(); // keep last: fades the page in once everything is ready
 });
