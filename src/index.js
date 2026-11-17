@@ -8,21 +8,39 @@ gsap.registerPlugin(ScrollTrigger);
 
 /* Import functions */
 import { initAccordion } from "./accordion";
-import { initBasicNavigationBar } from './basic-nav';
-import { initDisplayTime } from "./display-time";
+import { initButtonCharacterStagger } from "./button-character-stagger";
+import { initBunnyPlayerBackground } from "./bunny-background";
+import { initBasicNavigationBar } from "./basic-nav";
+import { initNavScrollBackground } from "./nav-scroll";
+import { initDirectionalListHover } from "./directional-list-hover";
+import { initGlobalParallax } from "./global-parallax";
 import { initSmoothScroll } from "./lenis-smooth-scroll";
-import { initLogoMarquee } from "./logo-marquee";
+import { initSplideSwiper } from "./splide-swiper.js";
 import { initTabSystem } from "./tab-system";
-
+import { initCal } from "./cal";
+import { initWorkHoverIX } from "./work-hover-ix";
+import { initSmoothyCarousel, initSmoothyMarquee } from "./smoothy";
+import { initCursor } from "./cursor";
 
 /* Initialize after Webflow finishes loading */
 window.Webflow ||= [];
 window.Webflow.push(() => {
   console.log("ODYN IS HERE");
   initBasicNavigationBar();
-  initLogoMarquee();
+  initNavScrollBackground();
+  initBunnyPlayerBackground();
+  initWorkHoverIX(); // must run after Bunny init
+
+  initCursor();
+  initButtonCharacterStagger();
+  initSmoothyMarquee();
   initAccordion();
+  initDirectionalListHover();
   initTabSystem();
-  initDisplayTime();
+  initSplideSwiper();
+  initSmoothyCarousel();
+  initGlobalParallax();
+
   initSmoothScroll();
+  initCal();
 });

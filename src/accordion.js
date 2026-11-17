@@ -38,12 +38,12 @@ export function initAccordion() {
     gsap.set(answer, { height: 0, alpha: 0, overflow: "hidden" })
 
     const tlOpen = gsap.timeline({ paused: true, onComplete: refreshScroll })
-    tlOpen.to(answer, { height: "auto", alpha: 1, duration: 0.6, ease: "power4.out" }, 0)
-    if (icon) tlOpen.to(icon, { rotate: 135, duration: 0.6, ease: "power4.out" }, 0)
+    tlOpen.to(answer, { height: "auto", alpha: 1, duration: 0.8, ease: "power4.out" }, 0)
+    if (icon) tlOpen.to(icon, { rotate: 180, duration: 0.8, ease: "power4.out" }, 0)
 
     const tlClose = gsap.timeline({ paused: true, onComplete: refreshScroll })
-    tlClose.to(answer, { height: 0, alpha: 0, duration: 0.4, ease: "power4.out" }, 0)
-    if (icon) tlClose.to(icon, { rotate: 0, duration: 0.4, ease: "power4.out" }, 0)
+    tlClose.to(answer, { height: 0, alpha: 0, duration: 0.6, ease: "power4.out" }, 0)
+    if (icon) tlClose.to(icon, { rotate: 45, duration: 0.6, ease: "power4.out" }, 0)
 
     let isOpen = false
 

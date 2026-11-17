@@ -6,7 +6,7 @@ export function initLogoMarquee() {
   const marquees = document.querySelectorAll('[data-logo-marquee-component]');
   if (!marquees.length) return;
 
-  const SECONDS_PER_LOGO = 4;
+  const SECONDS_PER_LOGO = 6;
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   marquees.forEach((marquee) => {
