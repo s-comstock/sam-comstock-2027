@@ -9,7 +9,7 @@ export function initSmoothScroll() {
   }
 
   const lenis = new window.Lenis({
-    lerp: 0.08, //Adjust the lerp value to control the smoothness of the scroll
+    lerp: 0.06, //Adjust the lerp value to control the smoothness of the scroll
     respectReducedMotion: true // Respect user's reduced motion preference
   });
 

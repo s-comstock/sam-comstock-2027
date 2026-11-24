@@ -2,14 +2,14 @@
 
 A live mirror of an [Odyn](https://app.odyn.dev) project. Synced one-way from Odyn to GitHub on every successful production deploy, so every version of your code is preserved in your own repository.
 
-**Latest version:** v7
-**Deployed:** 2026-11-17T15:06:21.891Z
+**Latest version:** v8
+**Deployed:** 2026-11-24T15:46:56.290Z
 
 ## Layout
 
 - `src/` — current project source. Mirrors what you write in the Odyn editor.
-- `dist/v1/` … `dist/v7/` — built artifacts for each deploy. Versions accumulate; nothing here is ever overwritten.
-- `dist/latest/` — built artifacts for v7 (the most recent deploy). Overwritten on every deploy; files no longer produced are removed.
+- `dist/v1/` … `dist/v8/` — built artifacts for each deploy. Versions accumulate; nothing here is ever overwritten.
+- `dist/latest/` — built artifacts for v8 (the most recent deploy). Overwritten on every deploy; files no longer produced are removed.
 - Each deploy commit is tagged `v{n}`.
 
 ## One-way mirror
@@ -22,11 +22,11 @@ If this repo is **public** on GitHub, [jsDelivr](https://www.jsdelivr.com/github
 
 For jsDelivr embeds in production, **always pin to a version tag**. Tagged URLs are immutable and cached forever; branch-path URLs (`@main/dist/latest/...`) are cached for up to 12 hours, so they lag your deploys.
 
-### Pinned to v7 (recommended for jsDelivr — immutable, cached forever)
+### Pinned to v8 (recommended for jsDelivr — immutable, cached forever)
 
-- `index.js` → https://cdn.jsdelivr.net/gh/s-comstock/sam-comstock-2027@v7/dist/v7/index.js
-- `logo-marquee.js` → https://cdn.jsdelivr.net/gh/s-comstock/sam-comstock-2027@v7/dist/v7/logo-marquee.js
-- `bundle.js` → https://cdn.jsdelivr.net/gh/s-comstock/sam-comstock-2027@v7/dist/v7/bundle.js
+- `index.js` → https://cdn.jsdelivr.net/gh/s-comstock/sam-comstock-2027@v8/dist/v8/index.js
+- `logo-marquee.js` → https://cdn.jsdelivr.net/gh/s-comstock/sam-comstock-2027@v8/dist/v8/logo-marquee.js
+- `bundle.js` → https://cdn.jsdelivr.net/gh/s-comstock/sam-comstock-2027@v8/dist/v8/bundle.js
 
 `dist/latest/` is best used for direct GitHub raw, GitHub Pages, or local checkout — not for jsDelivr-fronted production traffic.
 
